@@ -1,0 +1,181 @@
+GOAL: Selenium Java to Playwright Typescript code
+
+Instruction:
+Convert the given selenium java to playwright typescript code
+
+Follow the latest playwright typescript syntax v1.56
+
+If you do not have direct java to typescript conversion, write comment not implemented
+
+[CRITICAL] Do not directly generate typescript, it should be Playwright typescript
+
+Generate exactly same steps and no additional steps
+
+Write comments
+
+Do not hardcode sleep
+
+Use DOM to fetch the updated Xpath for generating code if playwright unsupported Xpath is in selenium java code
+
+Use same locator values in selenium and convert it to playwright typescript syntax v1.56 compatible locators
+
+Generate a code with wait for element to be loaded in a page
+
+
+
+
+
+
+Context
+You are a AI assistance to convert Selenium Java code to Playwright code
+
+Example
+For Playwright-typescript converted code
+
+import { test, expect } from '@playwright/test';
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Expects page to have a heading with the name of Installation.
+  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+});
+
+Input:
+DOM:
+<div id="form" onload="FitImagesToScreen()" onresize="FitImagesToScreen()">
+      <h2>Leaftaps Login</h2>
+
+
+      <form id="login" method="post" action="/opentaps/control/login">
+        <p class="top">
+          <label for="username">Username</label>
+          <input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input class="inputLogin" type="password" id="password" name="PASSWORD" size="50">
+        </p>
+
+        <p>
+          <input class="decorativeSubmit" type="submit" value="Login">
+        </p>
+      </form>
+    <br><br>
+  </div>
+<div id="center-content-column">
+
+<td id="ext-gen616"><input type="text" class="inputBox" name="companyName" size="30" maxlength="100" id="createLeadForm_companyName">
+</td>
+<input type="text" class="inputBox" name="firstName" size="30" maxlength="100" id="createLeadForm_firstName">
+<input type="text" class="inputBox" name="lastName" size="30" maxlength="100" id="createLeadForm_lastName">
+<input type="submit" class="smallSubmit" name="submitButton" value="Create Lead" id="ext-gen674">
+
+Persona
+Act as a Automation Test Engineer 
+
+Output
+Provide output is Playwright typescript which run efficiently
+
+Tone
+You are good engineer follow the coding standards on conversion
+
+Convert below selenium java code to Playwright-typescript
+
+package week2.day1;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class CreateLead {
+	
+	public static void main(String[] args) {
+		
+		
+		// Step 0) Setup the chromedriver using webdrivermanager software
+		WebDriverManager.chromedriver().setup();
+		
+		// Step 1) Launch the chrome browser (Class Name -> ChromeDriver)
+		ChromeDriver driver = new ChromeDriver();
+		
+		// Step 2) Load the URL (http://leaftaps.com/opentaps/control/main) -> get
+		driver.get("http://leaftaps.com/opentaps");
+		
+		// Step 3) Maximize the chrome browser
+		driver.manage().window().maximize();
+		
+		// Step 4) Find the username and type the value (DemoSalesManager)
+		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
+		
+		// Step 5) Find the password and type the value (crmsfa)
+		driver.findElement(By.id("password")).sendKeys("crmsfa");	
+		
+		// Step 6) Find the login button and click
+		driver.findElement(By.className("decorativeSubmit")).click();
+		
+		// Step 7) Verify the title 
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		// Step 8) Click CRM/SFA link
+		driver.findElement(By.linkText("CRM/SFA")).click();
+		
+		// Step 9) Click Create Lead Link
+		driver.findElement(By.linkText("Create Lead")).click();
+		
+		// Step 10) Find the company name and type the company name
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");
+		
+		// Step 11) Find the first name and type your name
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Babu");
+
+		// Step 12) Find the last name and type your name
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("Manickam");
+		
+		// Step 12 b) Select the Source dropdown with one of the visible text
+		WebElement source = driver.findElement(By.id("createLeadForm_dataSourceId"));
+		Select dd1 = new Select(source);
+		dd1.selectByVisibleText("Employee");
+		
+		// Step 12 c) Select the marketing campaign with one of the value
+		WebElement marketing = driver.findElement(By.id("createLeadForm_marketingCampaignId"));
+		Select dd2 = new Select(marketing);
+		dd2.selectByValue("9001");
+
+		// Step 13) Click Create Lead Button
+		driver.findElement(By.name("submitButton")).click();
+		
+		// Step 14) Print the new title
+		title = driver.getTitle();
+		System.out.println(title);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
