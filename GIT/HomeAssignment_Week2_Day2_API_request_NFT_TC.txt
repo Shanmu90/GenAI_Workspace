@@ -1,0 +1,17 @@
+{
+  "model": "llama-3.3-70b-versatile",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Title: Login functionality for retail banking customers \n As a registered banking customer,\nI want to securely log in to the digital banking platform using my credentials, \nSo that I can access my account details, manage funds, and perform banking transactions."
+    },
+    {
+      "role": "system",
+      "content": "As an AI Assistant give me a Test cases for Non Functional Testing"
+    },
+    {
+      "role": "assistant",
+      "content": "Provide only non-functional testcases with fields like TestCaseID, Test Description, Steps , Expected , Actuals , Priority"
+    }
+  ]
+}

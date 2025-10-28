@@ -1,0 +1,184 @@
+Here’s your **beautified and formatted** version of the non-functional test cases for login functionality:
+
+---
+
+## 🧪 Non-Functional Test Cases for Login Functionality – Retail Banking Digital Platform
+
+---
+
+### ✅ **Performance Test Cases**
+
+---
+
+#### 1. **TestCaseID:** `PFT-001`
+
+* **Description:** Verify the login functionality's response time under normal load.
+* **Steps:**
+
+  1. Simulate a normal user load (e.g., 100 users).
+  2. Measure the average response time for successful logins.
+* **Expected Result:** Average response time should be **< 2 seconds**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+#### 2. **TestCaseID:** `PFT-002`
+
+* **Description:** Verify the login functionality's response time under peak load.
+* **Steps:**
+
+  1. Simulate a peak user load (e.g., 1000 users).
+  2. Measure the average response time for successful logins.
+* **Expected Result:** Average response time should be **< 5 seconds**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+#### 3. **TestCaseID:** `PFT-003`
+
+* **Description:** Verify the system's ability to handle a large number of concurrent login requests.
+* **Steps:**
+
+  1. Simulate 5000 concurrent login attempts.
+  2. Monitor system performance and error rates.
+* **Expected Result:** System handles requests without significant errors or performance degradation.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+### 🔐 **Security Test Cases**
+
+---
+
+#### 4. **TestCaseID:** `SFT-001`
+
+* **Description:** Verify password encryption during login.
+* **Steps:**
+
+  1. Use a network sniffer to capture login traffic.
+  2. Attempt to decrypt the captured password.
+* **Expected Result:** Password should remain **encrypted** and **not decipherable**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** Critical
+
+---
+
+#### 5. **TestCaseID:** `SFT-002`
+
+* **Description:** Verify protection against brute-force login attempts.
+* **Steps:**
+
+  1. Attempt repeated logins with incorrect credentials (e.g., 10 attempts).
+  2. Observe lockout after a specific threshold.
+* **Expected Result:** Account should lock after **3–5 incorrect attempts**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+#### 6. **TestCaseID:** `SFT-003`
+
+* **Description:** Verify session expiration after inactivity.
+* **Steps:**
+
+  1. Log in to the system.
+  2. Wait for an inactivity period (e.g., 15 minutes).
+  3. Try to perform an action without logging in again.
+* **Expected Result:** Session should **expire**, prompting re-authentication.
+* **Actual Result:** [Insert actual result]
+* **Priority:** Medium
+
+---
+
+### 👩‍💻 **Usability Test Cases**
+
+---
+
+#### 7. **TestCaseID:** `UFT-001`
+
+* **Description:** Verify clarity and accessibility of the login form.
+* **Steps:**
+
+  1. Inspect the login form for clarity.
+  2. Test using assistive tech (e.g., screen readers).
+* **Expected Result:** Login form is **clear**, **accessible**, and **user-friendly**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** Medium
+
+---
+
+#### 8. **TestCaseID:** `UFT-002`
+
+* **Description:** Verify the usability of the forgot password/recovery process.
+* **Steps:**
+
+  1. Start the password recovery process.
+  2. Follow the instructions provided.
+* **Expected Result:** Recovery should be **straightforward** and **successful**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** Medium
+
+---
+
+### 🌐 **Compatibility Test Cases**
+
+---
+
+#### 9. **TestCaseID:** `CFT-001`
+
+* **Description:** Verify login functionality across different browsers.
+* **Steps:**
+
+  1. Test login on Chrome, Firefox, Safari, etc.
+  2. Verify login and post-login actions.
+* **Expected Result:** Login should work across **all tested browsers**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+#### 10. **TestCaseID:** `CFT-002`
+
+* **Description:** Verify login functionality across different devices.
+* **Steps:**
+
+  1. Test login on desktop, laptop, tablet, and smartphone.
+  2. Ensure successful login and navigation.
+* **Expected Result:** Login should work across **all tested devices**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+### ⚙️ **Scalability Test Cases**
+
+---
+
+#### 11. **TestCaseID:** `SCT-001`
+
+* **Description:** Verify the system’s ability to scale with increasing users.
+* **Steps:**
+
+  1. Gradually increase user load from 100 to 10,000.
+  2. Monitor system performance and error rates.
+* **Expected Result:** System should **scale efficiently** without major performance loss.
+* **Actual Result:** [Insert actual result]
+* **Priority:** High
+
+---
+
+#### 12. **TestCaseID:** `SCT-002`
+
+* **Description:** Verify data storage scalability.
+* **Steps:**
+
+  1. Increase data per user (e.g., transaction history).
+  2. Observe performance and retrieval times.
+* **Expected Result:** No performance drop with **larger data volumes**.
+* **Actual Result:** [Insert actual result]
+* **Priority:** Medium
+
+
